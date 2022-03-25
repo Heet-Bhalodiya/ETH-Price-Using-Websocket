@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Using Websocket</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+
+       
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 id="stock-price">... <span>$</span></h1>
+        <h1>Chart Of ETH Price</h1>
+        <canvas id="canvas"></canvas>
+    </div>
+
+
+
+    <div style="border: 1px solid black; padding: 3px;">
+
+        <table id="table1" class="cell-border compact hover dt[-head|-body]-center stripe">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Etherium Price</th>
+                    <th scope="col"> Time </th>
+                </tr>
+            </thead>
+            <tbody id="data1">
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('#table1').dataTable({
+                scrollY: '200px',
+                paging: false,
+                colReorder: true
+            });
+        });
+
+
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
